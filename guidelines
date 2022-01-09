@@ -1,0 +1,34 @@
+##Data was cleaned using the code in data_cleaning_code.py
+## You can view the report before and after cleaning
+## I will share the accident_clean on drive.
+
+
+
+-------------------------------------------------------How to work-------------------------------------------------------
+-->Pick all date and time elements and combine them
+-->USe date time index for uniform sorting of data across team
+-->Plot Data(Number of accidents) againist time and plot
+--->Receive date day , year and TIme dynamically
+
+##ALL PLOTS MUST SORT DATA WITH DATETIME DYNAMICALLY 
+##Use time range from above slots
+## Use specific time or dates for plots with a max of 5 times selected individually for the sake of space
+## Number of accident vs quality that has meaning to road safety eg weather , road etc depending on allocation
+## Get necessary means(averages) for cards, plot bar graphs for categorical data, plot line graphs, and also combo (line and bar)
+## You can also plot historgrams for the necessary.
+## Pick a max of 3 comparisons to graph your data but if data preses you can do more
+## Keep code simple as possible.
+
+######CAtegorization is found on the categorization.png and it definition on the categorization.py
+# Teddy deals location
+
+# R0ny Deals Infrastrure
+
+# Linda Deals Enviroment
+
+# Eric Basic
+
+## IF anyone from the rest of the community of Kenya Explore wishes to join Kindly direct them accordingly.
+## Note them down due to references.
+
+
