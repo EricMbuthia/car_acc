@@ -7,9 +7,9 @@ import random
 accDf=pd.read_csv("copy_accidents.csv")
 
 profile = accDf.profile_report(title="Accidents")
-profile.to_file(output_file="report_before_clean.html")
-unwanted_cols = ['Junction_Detail']
-accDf.drop(columns = unwanted_cols)
+profile.to_file(output_file="report_before_clean13th.html")
+unwanted_cols = ['Junction_Detail', 'LSOA_of_Accident_Location']
+accDf.drop(columns = unwanted_cols, inplace=True)
 
 # print(accDf.info())
 ##Handle Location Missing values by drop Na
@@ -41,7 +41,7 @@ print(accDf['Time'].isna().sum())
 ###Handle Did_Police_Officer_Attend_Scene_of_Accident by filling with mode
 print("Before FillNa Did_Police_Officer_Attend_Scene_of_Accident ")
 print(accDf['Did_Police_Officer_Attend_Scene_of_Accident'].isna().sum())
-accDf['Did_Police_Officer_Attend_Scene_of_Accident'].fillna(accDf['Did_Police_Officer_Attend_Scene_of_Accident'].mode(), inplace=True)
+accDf['Did_Police_Officer_Attend_Scene_of_Accident'].fillna(accDf['Did_Police_Officer_Attend_Scene_of_Accident'].mode()[0], inplace=True)
 print("After FillNa Did_Police_Officer_Attend_Scene_of_Accident ")
 print(accDf['Did_Police_Officer_Attend_Scene_of_Accident'].isna().sum())
 
@@ -149,8 +149,8 @@ print(accDf.duplicated( keep=False).sum())
 accDf.drop_duplicates(keep="first", inplace=True, ignore_index=True)
 print("After Drop Dblicates ")
 print(accDf.duplicated( keep=False).sum())
-accDf.to_csv('accident_clean.csv', index=False)
+accDf.to_csv('accident_clean13th.csv', index=False)
 profile = accDf.profile_report(title="Accidents")
-profile.to_file(output_file="report_after_clean.html")
+profile.to_file(output_file="report_after_clean13th.html")
 
 
